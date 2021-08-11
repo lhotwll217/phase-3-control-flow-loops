@@ -1,5 +1,15 @@
+# require 'pry'
+
 def happy_new_year
-  # your code here
+  i = 10
+  while i >= 0 
+     if i > 0
+      puts i
+     else
+      puts "Happy New Year!"
+    end
+    i = i - 1 
+  end
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -16,9 +26,22 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  (1...101).each do |num|
+   puts fizzbuzz(num)
+  end
 end
 
+
 def reverse_string(str)
-  # your code here
+   length = str.length
+   reversedStr = ''
+  #  puts str[length - 1]
+   while length >= 1
+    reversedStr = reversedStr + str[length - 1]  
+    length = length - 1
+   end
+   p reversedStr
 end
+
+reverse_string("bee")
+
